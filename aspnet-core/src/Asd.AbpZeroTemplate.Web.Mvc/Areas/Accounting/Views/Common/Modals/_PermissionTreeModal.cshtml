@@ -1,0 +1,15 @@
+﻿@using Asd.AbpZeroTemplate.Web.Areas.Accounting.Models.Common
+@using Asd.AbpZeroTemplate.Web.Areas.Accounting.Models.Common.Modals
+@model IPermissionsEditViewModel
+
+@await Html.PartialAsync("~/Areas/Accounting/Views/Common/Modals/_ModalHeader.cshtml", new ModalHeaderViewModel( L("SelectPermissions")))
+
+<div class="modal-body">
+    <div id="PermissionFilterTree">
+        @await Html.PartialAsync("~/Areas/Accounting/Views/Common/_PermissionTree.cshtml", Model)
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" data-dismiss="modal">@L("Select")</button>
+</div>
+

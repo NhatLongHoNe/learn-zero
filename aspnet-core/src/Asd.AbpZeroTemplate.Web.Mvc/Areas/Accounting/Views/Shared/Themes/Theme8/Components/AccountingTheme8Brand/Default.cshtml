@@ -1,0 +1,11 @@
+﻿@using Abp.Runtime.Session
+@using Asd.AbpZeroTemplate.Web.Areas.Accounting.Models.Layout
+@using Asd.AbpZeroTemplate.Web.Areas.Accounting.Views.Shared.Components.AccountingLogo
+@model HeaderViewModel
+@{
+    Layout = null;
+}
+
+<a href="@Url.Action("Index", "Home", new {area = string.Empty})" target="_blank" class="mr-20 brand-logo">
+    @await Component.InvokeAsync(typeof(AccountingLogoViewComponent), new {logoSkin="dark", logoClass = "klogo-default max-h-35px"})
+</a>

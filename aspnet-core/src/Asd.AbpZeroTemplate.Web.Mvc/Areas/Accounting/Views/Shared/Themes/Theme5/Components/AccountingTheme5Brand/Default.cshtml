@@ -1,0 +1,10 @@
+﻿@using Asd.AbpZeroTemplate.Web.Areas.Accounting.Models.Layout
+@using Asd.AbpZeroTemplate.Web.Areas.Accounting.Views.Shared.Components.AccountingLogo
+@model HeaderViewModel
+@{
+    Layout = null;
+    var theme = await GetTheme();
+}
+<a href="@Url.Action("Index", "Home", new {area = string.Empty})" class="brand-logo">
+    @await Component.InvokeAsync(typeof(AccountingLogoViewComponent), new {LogoSkin = "light"})
+</a>
